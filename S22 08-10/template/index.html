@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabs with Ordered List</title>
+    <style>
+        /* Style for the tabs */
+        .tab {
+            display: inline-block;
+            padding: 10px;
+            margin: 5px;
+            background-color: lightgray;
+            cursor: pointer;
+        }
+
+        .tab:hover {
+            background-color: gray;
+        }
+
+        /* Content area */
+        .content {
+            margin-top: 20px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            background-color: #f9f9f9;
+            min-height: 100px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="tabs">
+        <span class="tab" onclick="showContent('skills')">Skills</span>
+        <span class="tab" onclick="showContent('education')">Education</span>
+        <span class="tab" onclick="showContent('other')">Other</span>
+    </div>
+
+    <div id="content" class="content">
+        <!-- Content will be displayed here -->
+        Click on a tab to see the content.
+    </div>
+
+    <script>
+        function showContent(tab) {
+            const content = document.getElementById('content');
+            if (tab === 'skills') {
+                content.innerHTML = `
+                    <h3>
+                        </h3>
+                    <ol>
+                        <li>Programming in Python</li>
+                        <li>Web Development (HTML, CSS, JS)</li>
+                        <li>Data Analysis</li>
+                    </ol>`;
+            } else if (tab === 'education') {
+                content.innerHTML = `
+                    <h3>Education</h3>
+                    <ol>
+                        <li>Bachelor's Degree in Computer Science</li>
+                        <li>Master's Degree in Data Science</li>
+                        <li>Certified Web Developer</li>
+                    </ol>`;
+            } else if (tab === 'other') {
+                content.innerHTML = `
+                    <h3>Other</h3>
+                    <ol>
+                        <li>Volunteer Work</li>
+                        <li>Hobbies: Reading, Hiking</li>
+                        <li>Languages: English, Spanish</li>
+                    </ol>`;
+            }
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+
+    <h2>title 1</h2>
+    <h2>title 2</h2>
+
+    <button onclick="changeStyle()">Click me</button>
+
+    <script>
+        function changeStyle() {
+            var headh2Collection = document.querySelectorAll("h2");
+            var h2dom = headh2Collection[1];  // Correctly stored in h2dom
+            h2dom.style.color = "red";        // Use h2dom, not headh2
+        }
+    </script>
+
+    <!-- <h2>title 1</h2>
+    <h2>title 2</h2>
+
+    <button onclick="changeStyle()">Click me</button>
+
+    <script>
+        function changeStyle() {
+            var headh2Collection = document.querySelectorAll("h2");
+            var h2dom = headh2Collection[0];
+            headh2.style.color = "red";
+        }
+    </script> -->
+</body>
+
+</html>

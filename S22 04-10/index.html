@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        #container {
+            display: flex;
+            justify-content: space-evenly;
+            flex-wrap: wrap;
+        }
+    </style>
+</head>
+
+<body>
+    <h2>insertCard</h2>
+    <button onclick="createCards();">Click</button>
+
+    <div id="container">
+
+    </div>
+
+</body>
+
+<script>
+    function createCard() {
+        let div = document.createElement("div");
+        div.style.width = "250px";
+        div.style.height = "300px";
+        div.style.marginTop = "50px";
+        div.style.border = "1px solid black";
+        div.style.textAlign = "center"
+        div.style.alignContent = "center"
+
+        let img = document.createElement("img");
+        img.style.height = "150px";
+        img.src = "girl.jpg"
+        div.appendChild(img);
+
+        let p = document.createElement("p");
+        p.innerText = info.name;
+        div.appendChild(p);
+
+        document.querySelector("#container").appendChild(div);
+    }
+
+    function createCards() {
+        let info = [{ name: "Kshitij", url: "" }, { name: "Aditya", url: "" }, { name: "Pooja", url: "" }, { name: "Savitri", url: "" }, { name: "Deepti", url: "" }, { name: "Surbhi", url: "" }, { name: "Shruti", url: "" }, { name: "Ram", url: "" }, { name: "Viththal", url: "" }, { name: "Shubham", url: "" }];
+
+        for (let i = 0; i < 10; i++) {
+            createCard(info[i]);
+        }
+    }
+
+
+
+
+
+</script>
+
+</html>

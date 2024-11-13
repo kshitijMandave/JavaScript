@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h2>Welcome to the World of Kshitij!!</h2>
+    <button onclick="changeContent ();">Enter</button>
+    <script>
+        function changeContent() {
+            var heading = document.querySelector("h2");
+            var btn = document.querySelector("button")
+            heading.style.color = "Brown";
+            heading.innerText = "You entered in Kshitij World!!"
+            btn.style.backgroundColor = "blue";
+            btn.style.color = "white";
+        }
+    </script>
+</body>
+
+</html>

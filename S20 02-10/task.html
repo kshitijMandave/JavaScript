@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h2>DOM Element Creation</h2>
+    <button onclick="createBtn()">create Element</button>
+    <script>
+        function createBtn() {
+            var bodyacc = document.createElement("h2")
+            bodyacc.innerText = "Hi My Name is Kshitij";
+            bodyacc.style.color = "red";
+
+            var bodyDomElement = document.querySelector("body")
+            bodyDomElement.appendChild(bodyacc);
+        }
+    </script>
+</body>
+
+</html>

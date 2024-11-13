@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Insrt Table</h2>
+    <button onclick="insertTable()">Click Me</button>
+    <!-- <table>
+        <thead>
+            <tr>
+                <td>Name</td>
+                <td>Phone</td>
+                <td>Email</td>
+            </tr>
+        </thead>
+    </table> -->
+
+    <script>
+        function insertTable(){
+
+            var table = document.createElement("table");
+            var thead = document.createElement("thead");
+            var tbody = document.createElement("tbody");
+            var tr = document.createElement("tr");
+            var tr1 = document.createElement("tr");
+            var tr2 = document.createElement("tr");
+            var tr3 = document.createElement("tr");
+
+            // Creating a Instance of 3 rows
+            var t1 = document.createElement("th");
+            var t2 = document.createElement("th");
+            var t3 = document.createElement("th");
+
+            // For 1st Row
+            t1.innerText = "ID";
+            tr.appendChild(t1)
+
+            // For Second Row
+            t2.innerText = "Name";
+            tr.appendChild(t2)
+
+            // For Third Row
+            t3.innerText = "City";
+            tr.appendChild(t3)
+
+            var td1 = document.createElement("td")
+            var td2 = document.createElement("td")
+            var td3 = document.createElement("td")
+
+            td1.innerText="01";
+            td1.setAttribute("id", "Div1");
+            tr1.appendChild(td1); //This will add ID with Element
+
+            td2.innerText="Kshitij";
+            tr1.appendChild(td2);
+
+            td3.innerText="Nagpur";
+            tr1.appendChild(td3);
+
+            var tdr1 = document.createElement("td");
+            var tdr2 = document.createElement("td");
+            var tdr3 = document.createElement("td");
+
+            tdr1.innerText="02";
+            tr2.appendChild(tdr1);
+
+            tdr2.innerText="Aditya";
+            tr2.appendChild(tdr2);
+
+            tdr3.innerText="Bhilai";
+            tr2.appendChild(tdr3);
+
+            var tdrr1 = document.createElement("td");
+            var tdrr2 = document.createElement("td");
+            var tdrr3 = document.createElement("td");
+
+            tdrr1.innerText="03";
+            tr3.appendChild(tdrr1);
+
+            tdrr2.innerText="Khushi";
+            tr3.appendChild(tdrr2);
+
+            tdrr3.innerText="Sakoli";
+            tr3.appendChild(tdrr3);
+
+
+
+            
+            thead.appendChild(tr)
+            table.appendChild(thead);
+            
+            tbody.appendChild(tr1);
+            table.appendChild(tbody);
+
+            tbody.appendChild(tr2);
+            table.appendChild(tbody);
+
+            tbody.appendChild(tr3);
+            table.appendChild(tbody);
+            
+
+            table.style.width = "250px";
+            table.style.height = "200px";
+            table.style.border = "1px solid black";
+            document.querySelector("body").appendChild(table);
+        }
+
+        // setTimeout(() => {
+        //     insertTable();
+        // }, 2000);
+    </script>
+</body>
+</html>

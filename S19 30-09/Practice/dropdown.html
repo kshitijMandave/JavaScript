@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Drop Down</title>
+</head>
+<body>
+    <label for="fontSize">Choose font size:</label>
+    <select id="fontSize" onchange="changeFontSize()">
+        <option value="Defult">Defult</option>
+        <option value="One">One</option>
+        <option value="Two">Two</option>
+        <option value="Three">Three</option>
+        <option value="Four">Four</option>
+        <option value="Five">Five</option>
+    </select>
+
+    <p id="text">Hello I'm Text</p>
+
+    <script>
+        function changeFontSize(){
+            var dropdown = document.querySelector("#fontSize")
+            var text = document.querySelector("#text")
+            var selectedVal = dropdown.value;
+
+            if(selectedVal === 'Defult'){
+                text.style.fontSize = '16px';
+            } else if (selectedVal === 'One') {
+                text.style.fontSize = '24px';
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        #card {
+            background-color: white;
+            width: 300px;
+            height: 250px;
+            align-items: center;
+            text-align: center;
+            border: 2px solid black;
+        }
+
+        input {
+            margin: 10px;
+        }
+
+        table {
+            margin-top: 10px;
+            width: 300px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id="card">
+        <form>
+            <input id="Username" type="text" class="tex" placeholder="Username">
+            <br>
+            <input type="email" class="tex" placeholder="Email">
+            <br>
+            <input type="password" class="tex" placeholder="Password">
+            <br>
+            <input onchange="changeback()" id="check" type="checkbox" checked>Change to Dark Mode
+            <br>
+            <button type="button" onclick="printContent();">Submit</button>
+        </form>
+
+        <table>
+            <tr>
+                <thead>
+                    <th>Name</th>
+                    <th>Password</th>
+                    <th>Email</th>
+                </thead>
+            </tr>
+            <tr>
+                <th id="name"></th>
+                <th></th>
+                <th></th>
+            </tr>
+        </table>
+
+
+    </div>
+
+    <script>
+        function printContent() {
+            var Uname = document.querySelector("#Username");
+            var name = document.querySelector("#name");
+            var utext = Uname.value;
+
+
+            console.log(utext);
+            // document.write(utext)
+            if (name.innerText === ' ' || name.innerText === '') {
+                name.innerText = utext;
+            }
+
+            var checkBox = document.querySelector("#check");
+            var cardBox = document.querySelector("#card");
+
+
+            function changeback (){
+                if (chekedOrNot) {
+                var cardBox = document.querySelector("#card");
+                cardBox.style.backgroundColor = "black";
+            }
+            }
+        }
+    </script>
+</body>
+
+</html>

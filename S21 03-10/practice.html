@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Insert Img</title>
+</head>
+<body>
+    <h2>Insert Image</h2>
+    <button onclick="showCard()">Click me</button>
+    <script>
+        function showCard (){
+            let div =  document.createElement("div")
+
+            div.style.width = "300px";
+            div.style.height = "400px";
+            div.style.backgroundColor = "yellow";
+            div.style.textAlign = "center";
+            div.style.alignContent = "center";
+            div.style.border = "2px solid red";
+            div.style.borderRadius = "10px";
+
+            let img = document.createElement("img");
+            img.src = "girl.jpg";
+            img.style.width = "150px";
+            img.style.borderRadius = "10px";
+
+            let name = document.createElement("h2");
+            name.innerText = "Uma Bharadwaj";
+
+            let gender = document.createElement("p");
+            gender.innerText = "Female";
+
+            let phone = document.createElement("p");
+            phone.innerText = "7038342551";
+
+            let btn = document.createElement("button");
+            btn.innerText = "Submit";
+            btn.style.backgroundColor = "red";
+            btn.style.color = "white";
+            btn.style.padding = "5px 10px 5px 10px";
+            btn.style.cursor = "pointer";
+
+            div.appendChild(img)
+            div.appendChild(name)
+            div.appendChild(gender)
+            div.appendChild(phone)
+            div.appendChild(btn)
+
+            area.innerHTML = div.outerHTML;
+        }
+    </script>
+</body>
+</html>

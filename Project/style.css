@@ -1,0 +1,93 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+}
+
+header {
+  width: 100%;
+  height: 100px;
+  background-color: #8da9c4;
+  text-align: center;
+  align-content: center;
+}
+header:hover {
+  width: 100%;
+  height: 100px;
+  background-color: #8da9c4;
+  text-align: center;
+  align-content: center;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+header .navbar {
+  padding: 10px 60px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+header .navbar .logo {
+  /* align-content: center; */
+  align-items: center;
+}
+
+header .navbar .logo a {
+  text-decoration: none;
+  font-size: 30px;
+  color: #0b2545;
+}
+header .navbar .logo a:hover {
+  text-decoration: none;
+  font-size: 30px;
+  color: #134074;
+}
+
+header .navbar .logo p {
+  font-size: 10px;
+  color: #0b2545;
+}
+
+header .navbar .links ul {
+  display: flex;
+  align-items: center;
+}
+
+header .navbar .links ul li {
+  list-style-type: none;
+  padding: 0 20px;
+}
+
+header .navbar .links ul li a {
+  text-decoration: none;
+  text-transform: uppercase;
+  color: #0b2545;
+  font-weight: 600;
+  font-size: 1rem;
+}
+
+header .navbar .links ul li a:hover {
+  text-decoration: none;
+  text-transform: uppercase;
+  color: #134074;
+  font-weight: 600;
+}
+
+header .navbar .links ul li button {
+  padding: 5px 10px;
+  font-weight: 600;
+  background-color: #0b2545;
+  border: 2px solid #0b2545;
+  color: white;
+  font-size: 1rem;
+  cursor: pointer;
+  border-radius: 5px;
+}
+header .navbar .links ul li button:hover {
+  padding: 5px 10px;
+  font-weight: 600;
+  background-color: transparent;
+  border: 2px solid #0b2545;
+  color: #0b2545;
+  font-size: 1rem;
+  cursor: pointer;
+}

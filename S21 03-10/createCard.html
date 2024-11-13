@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM</title>
+</head>
+
+<body>
+    <h2>Show Card</h2>
+    <button onclick="showCard();">Show Card</button>
+    <div id="area"></div>
+
+    <script>
+        function showCard() {
+            let div = document.createElement("div");
+            let area = document.getElementById("area")
+         
+            div.style.width = "300px";
+            div.style.height = "400px";
+            div.style.margin = "50px 0 "
+            div.style.backgroundColor = "yellow";
+            div.style.textAlign = "center";
+            div.style.alignContent = "center";
+            div.style.border = "2px solid red";
+            div.style.borderRadius = "10px";
+
+            // console.log('%ccreateCard.html:25 div.style', 'color: #007acc;', div.style);
+
+            // console.log('%ccreateCard.html:27 object', 'color: #007acc;', {
+            //     ...div.style
+            // });
+           
+
+            // console.log('%ccreateCard.html:36 typeof div.style', 'color: #007acc;', typeof div.style);
+
+
+            let img = document.createElement("img");
+            img.src = "girl.jpg";
+            img.style.width = "150px";
+            img.style.borderRadius = "10px";
+
+            let name = document.createElement("h2");
+            name.innerText = " Name : Uma Bharadwaj";
+
+            let gender = document.createElement("p");
+            gender.innerText = "Gender : Female";
+
+            let phone = document.createElement("p");
+            phone.innerText = "Phone : 7038342551";
+
+            let Address = document.createElement("p");
+            Address.innerText = "Address : Sakoli, 441802";
+
+            let btn = document.createElement("button");
+            btn.innerText = "Submit";
+            btn.style.backgroundColor = "red";
+            btn.style.color = "white";
+            btn.style.padding = "5px 10px 5px 10px";
+            btn.style.cursor = "pointer";
+
+            div.appendChild(img)
+            div.appendChild(name)
+            div.appendChild(gender)
+            div.appendChild(phone)
+            div.appendChild(Address)
+            div.appendChild(btn)
+
+
+            area.innerHTML = div.outerHTML;
+        }
+    </script>
+</body>
+
+</html>

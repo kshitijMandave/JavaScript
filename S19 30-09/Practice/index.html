@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Change Logo</title>
+    <style>
+        /* body{
+            color: aqua;
+            width: 100%;
+            height: 500px;
+            text-align: center;
+            align-items: center;
+        } */
+
+        #card-wrapper {
+            text-align: center;
+            background-color: antiquewhite;
+            height: 250px;
+            width: 250px;
+            align-content: center;
+            text-align: center;
+        }
+
+        #btn{
+            background-color: brown;
+            color: white;
+            padding: 5px;
+            border: 2px solid burlywood;
+            border-radius: 5px;
+            cursor: pointer;
+            border: none;
+        }
+        #btn:hover{
+            background-color: rgb(232, 10, 10);
+            color: white;
+            padding: 5px;
+            border: 2px solid burlywood;
+            border-radius: 5px;
+        }
+
+        img {
+            height: 200px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="card-wrapper">
+        <div id="js-img">
+            <img id="js-img-tag" src="/js-logo.png" alt="">
+        </div>
+        <div>
+            <button id="btn" onclick="changeImg();">Change to react</button>
+        </div>
+    </div>
+
+
+    <script>
+        function changeImg (){
+            var jsLogo = document.querySelector("#js-img-tag");
+            if(jsLogo.src.includes("js-logo.png")){
+                jsLogo.src = "React-logo.svg";
+            }
+            else{
+                jsLogo.src = "js-logo.png";
+            }
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- <div class="container"></div>
+    <button onclick="createElement()">Change content</button>
+    <script>
+        let container = document.querySelector('.container')
+        let createElement = () => {
+            let div = document.createElement('div');
+            div.style.width = "320px";
+            div.style.height = "320px";
+            div.style.border = "2px solid black";
+            container.appendChild(div)
+        }
+    </script> -->
+
+    <button onclick="addNewElement ()">Change content</button>
+    <div class="container"></div>
+    <script>
+
+        let addNewElement = () => {
+            let div = document.createElement("div");
+            div.textContent = "This is new div"
+            div.style.border = "1px solid black";
+            document.querySelector(".container").appendChild(div);
+        }
+    </script>
+
+</body>
+
+</html>
